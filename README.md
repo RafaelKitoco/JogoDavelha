@@ -115,26 +115,18 @@ Game Rules
     The first player to align n symbols (horizontally, vertically, or diagonally) wins.
     If the board is full without a winner, the game ends in a draw.
 
-# Running the Game Using the Makefile
+# Running the Game:
 
-## To start the game with the Makefile:
+1. **Run the Server First**
+   The server needs to be started before the client. This is because the client must connect to the server, and if the client is started before the server, it will encounter a connection error. 
+   
+   ### Step 1: Start the server
+        python server.py
 
-Run the following command:
-
-    make
-
-This will:
-
-Start the server in the background.
-Run the client, which will connect to the server and begin the game.
-
-## To completely remove the server and client executables (if you want to rebuild from scratch), run:
-
-    make fclean
-
-## To rebuild everything (remove existing server/client and start fresh), run:
-
-    make re
+2. **Run the Client After**
+    Once the server is running, you can start the client.
+    ### Step 2: Start the client:
+         python client.py
 
 # Code Explanation
 server.py File
@@ -194,22 +186,6 @@ victory X  # or victory O
 Draw: If the game ends in a draw, the message sent is:
 
 draw
-
-# Notes for Windows Users
-
-## Execution Order on Windows
-If you're using Windows, follow the steps below to ensure the game runs correctly and avoid connection issues. This is required due to Python's threading and socket behavior on Windows, especially when using tkinter.
-
-1. **Run the Server First**
-   The server needs to be started before the client. This is because the client must connect to the server, and if the client is started before the server, it will encounter a connection error. 
-   
-   ### Step 1: Start the server
-        python server.py
-
-2. **Run the Client After**
-    Once the server is running, you can start the client.
-    ### Step 2: Start the client:
-         python client.py
          
 # Contributions
 

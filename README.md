@@ -18,22 +18,6 @@ This project implements the classic **Tic-Tac-Toe** game in Python using the `tk
 - The first player to align `n` symbols (horizontally, vertically, or diagonally) wins.
 - If the board is full without a winner, the game ends in a draw.
 
-1. **### To run the game using the Makefile:**:
-
-   ```bash
-   make
-This will:
-
-Start the server in the background.
-Run the client, which will connect to the server and begin the game.
-
-2. **To completely remove the server and client executables (if you decide to rebuild from scratch), run:**
-   ```bash
-   make fclean
-
-3. **To rebuild everything (remove the existing server/client and start fresh), run:**
-   ```bash
-   make re
 # Code Explanation
 server.py File
 
